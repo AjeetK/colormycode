@@ -1,6 +1,6 @@
-# hilite.me
+# colormycode
 
-[hilite.me](http://hilite.me/) is a small webapp that converts your code
+[colormycode](http://colormycode.herokuapp.com/) is a small webapp (fork of hilite.me) that converts your code
 snippets into pretty-printed HTML format, easily embeddable into blog posts and
 websites.
 
@@ -15,14 +15,14 @@ Edit your main `nginx.conf`:
 
     http {
         ...
-        include /path/to/hilite.me/nginx.conf;
+        include /path/to/colormycode/nginx.conf;
     }
 
-Update the project location in `hilite.me/nginx.conf` and restart nginx.
+Update the project location in `colormycode/nginx.conf` and restart nginx.
 
 Add this line to your `/etc/hosts`:
 
-    127.0.0.1  hilite.dev
+    127.0.0.1  colormycode
 
-Type `make run` and go to <http://hilite.dev/>. If static files don't load make
-sure nginx has rx permissions for the `hilite.me/static` directory.
+Type `make run` and go to <http://colormycode.herokuapp.com/>. If static files don't load make
+sure nginx has rx permissions for the `colormycode/static` directory.
