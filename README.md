@@ -9,7 +9,7 @@ websites.
 To set up development environment you need to install these dependencies:
 
 * On FreeBSD: `portmaster textproc/py-pygments www/nginx www/py-flask`
-* On Debian: `aptitude install nginx python-flask python-pygments`
+* On Debian/Ubuntu: `aptitude install nginx python-flask python-pygments`
 
 Edit your main `nginx.conf`:
 
