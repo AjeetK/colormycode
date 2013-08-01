@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2009-2011 Alexander Kojevnikov <alexander@kojevnikov.com>
+# Copyright © 2009-2011 Alexander Kojevnikov <alexander@kojevnikov.com> , Chitrank Dixit <chitrankdixit@gmail.com>
 #
-# hilite.me is free software: you can redistribute it and/or modify
+# colormycode.herokuapp.com is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-# hilite.me is distributed in the hope that it will be useful,
+# colormycode.herokuapp.com is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU Affero General Public License for more details.
 
 # You should have received a copy of the GNU Affero General Public License
-# along with hilite.me.  If not, see <http://www.gnu.org/licenses/>.
+# along with colormycode.herokuapp.com.  If not, see <http://www.gnu.org/licenses/>.
 
 import re
 
@@ -21,7 +21,7 @@ from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
 
-def hilite_me(code, lexer, options, style, linenos, divstyles):
+def colormycode(code, lexer, options, style, linenos, divstyles):
     lexer = lexer or 'python'
     style = style or 'colorful'
     defstyles = 'overflow:auto;width:auto;'
@@ -35,7 +35,7 @@ def hilite_me(code, lexer, options, style, linenos, divstyles):
     html = highlight(code, get_lexer_by_name(lexer, **options), formatter)
     if linenos:
         html = insert_line_numbers(html)
-    html = "<!-- HTML generated using hilite.me -->" + html
+    html = "<!-- HTML generated using colormycode -->" + html
     return html
 
 def get_default_style():

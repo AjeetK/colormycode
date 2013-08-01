@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2009-2011 Alexander Kojevnikov <alexander@kojevnikov.com>
+# Copyright © 2009-2011 Alexander Kojevnikov <alexander@kojevnikov.com> , Chitrank Dixit <chitrankdixit@gmail.com>
 #
-# hilite.me is free software: you can redistribute it and/or modify
+# colormycode.herokuapp.com is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
@@ -14,7 +14,7 @@
 # GNU Affero General Public License for more details.
 
 # You should have received a copy of the GNU Affero General Public License
-# along with hilite.me.  If not, see <http://www.gnu.org/licenses/>.
+# along with colormycode.herokuapp.com.  If not, see <http://www.gnu.org/licenses/>.
 
 import datetime
 from urllib import quote, unquote
@@ -49,7 +49,7 @@ def index():
             'divstyles', unquote(request.cookies.get('divstyles', '')))
         divstyles = divstyles or get_default_style()
 
-        html = hilite_me(code, lexer, {}, style, linenos, divstyles)
+        html = colormycode(code, lexer, {}, style, linenos, divstyles)
         response = make_response(render_template('index.html', **locals()))
 
         next_year = datetime.datetime.now() + datetime.timedelta(days=365)
@@ -85,7 +85,7 @@ def api():
     linenos = request.values.get('linenos', '')
     divstyles = request.form.get('divstyles', get_default_style())
 
-    html = hilite_me(code, lexer, options, style, linenos, divstyles)
+    html = colormycode(code, lexer, options, style, linenos, divstyles)
     response = make_response(html)
     response.headers["Content-Type"] = "text/plain"
     return response
