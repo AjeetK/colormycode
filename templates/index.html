@@ -19,12 +19,19 @@
 
 </script>
     <style type="text/css">
+    .all {
+
+	background: none repeat scroll 0% 0%;
+	font-family: "Lato", sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: ;
+	}
       body, html {
         margin:0;
         padding:0;
         color:#333;
-        background:#fff;
-        font-family:Verdana,Helvetica,Arial,sans-serif;
+        font-family:"proxima-nova",sans-serif;;
       }
       input {
           margin:.5em 0;
@@ -39,12 +46,14 @@
       #code {
           float:left;
           width:50%;
+          height: 150px;
       }
       #html {
           float:right;
           width:50%;
       }
-      #code2 {
+      #code2 textarea{
+      	  background-color: #F8C5C5;
           margin-right:1em;
       }
       #html2 {
@@ -55,6 +64,7 @@
           height:10em;
       }
       #html2 textarea {
+      	  background-color: #F8C5C5;
           float:right;
       }
       #options {
@@ -77,9 +87,75 @@
 		  width: 970px;
 		  height: 90px;
 		  }
+	  #heading{
+	  	display:table;
+   		background-color: #C67171;
+   		height: 40px;
+   		width: 100%;
+		}
+	  #head-span{
+	  	font-family: "";
+	  	display:table-cell;
+	  	vertical-align: middle;
+	  	color: white; 
+   		width:400px;
+   		height: 40px;
+   		text-indent: 300px;
+   		font-size: 20px;
+		}
+	  .box{
+	  	height: 25px;
+	  	width: 250px;
+	  	background-color: #C67171;
+	  	color: white;
+	  	font-size: 16px;
+	  	vertical-align: middle;
+	  	display:table-cell;
+	  	text-indent: 2px;
+	  }
+	  .box1{
+	  	height: 25px;
+	  	width: 85px;
+	  	background-color: #C67171;
+	  	color: white;
+	  	font-size: 16px;
+	  	vertical-align: middle;
+	  	display:table-cell;
+	  	text-indent: 2px;
+	  }
+	  .box2{
+	  	height: 25px;
+	  	width: 50px;
+	  	background-color: #C67171;
+	  	color: white;
+	  	font-size: 16px;
+	  	vertical-align: middle;
+	  	display:table-cell;
+	  	text-indent: 2px;
+	  }
+	  .box3{
+	  	height: 25px;
+	  	width: 50px;
+	  	background-color: #C67171;
+	  	color: white;
+	  	font-size: 16px;
+	  	vertical-align: middle;
+	  	display:table-cell;
+	  	text-indent: 2px;
+	  }
+	  .box4{
+	  	height: 25px;
+	  	width: 120px;
+	  	background-color: #C67171;
+	  	color: white;
+	  	font-size: 16px;
+	  	vertical-align: middle;
+	  	display:table-cell;
+	  	text-indent: 2px;
+	  }
     </style>
   </head>
-  <body>
+  <body class="all">
 	<!-- AddThis Smart Layers BEGIN -->
 	<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=chitrank"></script>
@@ -102,50 +178,57 @@
       <div id="container">
         <div id="header">
           <p>
-            <strong style="color:greef"><font color="red">H</font><font color="green">I</font><font color="blue">G</font><font color="yellow">h</font><font color="orange">L</font><font color="brown">I</font><font color="aquamarine">G</font><font color="amber">H</font><font color="vermillion">T</font><font color="indigo">M</font><font color="hotpink">Y</font></font><font color="amber">C</font><font color="vermillion">O</font><font color="indigo">D</font><font color="hotpink">E</font></strong> is a fork of a well known hilite.me project. highlightmycode is a syntax highlighter which support many programming languages to highlight. The code snippets can be easily highlighted and can be used in emails, blog posts, website and many more.
+          <div id="heading">
+          	<span id="head-span"> <h2>HIGHLIGHT MY CODE</h2> </span>
+          </div>
+
+          </br>
+            <strong style="color:greef">HIGHTLIGHT MY CODE</strong> is a fork of a well known hilite.me project. It is a syntax highlighter which support many programming languages to highlight. The code snippets can be easily highlighted and can be used in emails, blog posts, website and many more.
           </p>
           <p>
-            Copy the source code in left pane, select the language and the color scheme, and click &quot;Highlight!&quot;. The readyto use code snippet can be copied from right pane, no external javascript, css are needed.
+            Copy and paste the source code in left pane, select the language and the color scheme, and click &quot;Highlight!&quot;. The readyto use code snippet can be copied from right pane, no external javascript, css are needed.
           </p>
         </div>
         <div id="main">
           <div id="code">
             <div id="code2">
-              <strong>Source code:</strong><br/>
+              <div class="box"><strong>Source code (Paste below):</strong><br/></div> </br>
               <textarea name="code" rows="10" cols="40">{{ code }}</textarea>
             </div>
           </div>
           <div id="html">
             <div id="html2">
-              <strong>HTML:</strong><br/>
+              <div class="box"><strong>HTML (Copy from here):</strong><br/></div> </br>
               <textarea id="html" name="html" rows="10" cols="40" readonly="readonly" onClick="javascript:this.form.html.focus();this.form.html.select();">{{ html }}</textarea>
             </div>
           </div>
         </div>
+
         <div id="options">
           <p>
-            Language:
+          </br>
+            <span class="box1">Language: </span>
             <select name="lexer">
               {% for item in lexers %}
               <option {% if item.0 == lexer %}selected="selected" {% endif %}value="{{ item.0 }}">{{ item.1 }}</option>
               {% endfor %}
             </select>
-            Style:
+            <span class="box2">Style:</span>
             <select name="style">
               {% for item in styles %}
               <option {% if item == style %}selected="selected" {% endif %}value="{{ item }}">{{ item }}</option>
               {% endfor %}
             </select>
-            <input name="linenos" id="linenos" type="checkbox" value="1" {% if linenos %}checked="checked"{% endif %} /><label for="linenos">Line numbers</label>
+            <input name="linenos" id="linenos" type="checkbox" value="1" {% if linenos %}checked="checked"{% endif %} /><label for="linenos"><span class="box4"> Line numbers </span></label>
             <br/>
-            CSS:
+            <span class="box3" >CSS: </span>
             <input type="text" id="divstyles" name="divstyles" value="{{ divstyles|escape }}"/>
             <input type="submit" value="Highlight!"/>
           </p>
         </div>
         <div id="preview">
           <p>
-            <strong>Preview:</strong>
+            <strong class="box1">Preview:</strong>
           </p>
           {% autoescape false %}
           {{ html }}
