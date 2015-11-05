@@ -21,12 +21,12 @@
     <style type="text/css">
     .all {
 
-	background: none repeat scroll 0% 0%;
-	font-family: "Lato", sans-serif;
-	font-size: 14px;
-	line-height: 20px;
-	color: ;
-	}
+  background: none repeat scroll 0% 0%;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: ;
+  }
       body, html {
         margin:0;
         padding:0;
@@ -53,7 +53,7 @@
           width:50%;
       }
       #code2 textarea{
-      	  background-color: #F8C5C5;
+          background-color: #EAEAEA;
           margin-right:1em;
       }
       #html2 {
@@ -64,7 +64,7 @@
           height:10em;
       }
       #html2 textarea {
-      	  background-color: #F8C5C5;
+          background-color: #EAEAEA;
           float:right;
       }
       #options {
@@ -84,106 +84,65 @@
           font-size:75%;
       }
       div.advertisement{
-		  width: 970px;
-		  height: 90px;
-		  }
-	  #heading{
-	  	display:table;
-   		background-color: #C67171;
-   		height: 40px;
-   		width: 100%;
-		}
-	  #head-span{
-	  	font-family: "";
-	  	display:table-cell;
-	  	vertical-align: middle;
-	  	color: white; 
-   		width:400px;
-   		height: 40px;
-   		text-indent: 300px;
-   		font-size: 20px;
-		}
-	  .box{
-	  	height: 25px;
-	  	width: 250px;
-	  	background-color: #C67171;
-	  	color: white;
-	  	font-size: 16px;
-	  	vertical-align: middle;
-	  	display:table-cell;
-	  	text-indent: 2px;
-	  }
-	  .box1{
-	  	height: 25px;
-	  	width: 85px;
-	  	background-color: #C67171;
-	  	color: white;
-	  	font-size: 16px;
-	  	vertical-align: middle;
-	  	display:table-cell;
-	  	text-indent: 2px;
-	  }
-	  .box2{
-	  	height: 25px;
-	  	width: 50px;
-	  	background-color: #C67171;
-	  	color: white;
-	  	font-size: 16px;
-	  	vertical-align: middle;
-	  	display:table-cell;
-	  	text-indent: 2px;
-	  }
-	  .box3{
-	  	height: 25px;
-	  	width: 50px;
-	  	background-color: #C67171;
-	  	color: white;
-	  	font-size: 16px;
-	  	vertical-align: middle;
-	  	display:table-cell;
-	  	text-indent: 2px;
-	  }
-	  .box4{
-	  	height: 25px;
-	  	width: 120px;
-	  	background-color: #C67171;
-	  	color: white;
-	  	font-size: 16px;
-	  	vertical-align: middle;
-	  	display:table-cell;
-	  	text-indent: 2px;
-	  }
+      width: 970px;
+      height: 90px;
+      }
+    #heading{
+      display:table;
+      background-color: #8C8787;
+      height: 40px;
+      width: 100%;
+    }
+    #head-span{
+      font-family: "";
+      display:table-cell;
+      vertical-align: middle;
+      color: white; 
+      width:400px;
+      height: 40px;
+      text-indent: 300px;
+      font-size: 20px;
+    }
+    .box{
+      background-color: #FFF;
+      color: #030303;
+      font-size: 16px;
+      vertical-align: middle;
+      display: table-cell;
+      text-indent: 2px;
+    }
+
     </style>
   </head>
   <body class="all">
-	<!-- AddThis Smart Layers BEGIN -->
-	<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=chitrank"></script>
-	<script type="text/javascript">
-	addthis.layers({
+  <!-- AddThis Smart Layers BEGIN -->
+  <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=chitrank"></script>
+  <script type="text/javascript">
+  addthis.layers({
     'theme' : 'transparent',
     'share' : {
-      'position' : 'left',
+      'position' : 'right',
       'numPreferredServices' : 5
     },  
     'whatsnext' : {},  
     'recommended' : {
       'title': 'Recommended for you:'
     } 
-	});
-	</script>
-	<!-- AddThis Smart Layers END -->
-	  
+  });
+  </script>
+  <!-- AddThis Smart Layers END -->
+    
     <form action="/" method="post">
       <div id="container">
         <div id="header">
           <p>
           <div id="heading">
-          	<span id="head-span"> <h2>HIGHLIGHT MY CODE</h2> </span>
+            <span id="head-span"> <h2>HIGHLIGHT MY CODE</h2> </span>
           </div>
 
           </br>
-            <strong style="color:greef">HIGHTLIGHT MY CODE</strong> is a fork of a well known hilite.me project. It is a syntax highlighter which support many programming languages to highlight. The code snippets can be easily highlighted and can be used in emails, blog posts, website and many more.
+            <strong style="color:black">HIGHTLIGHT MY CODE</strong> is a fork of a well known hilite.me project. It is a syntax highlighter which support many programming languages to highlight. The code snippets can be easily highlighted and can be used in emails, blog posts, website and many more.
           </p>
           <p>
             Copy and paste the source code in left pane, select the language and the color scheme, and click &quot;Highlight!&quot;. The readyto use code snippet can be copied from right pane, no external javascript, css are needed.
@@ -207,28 +166,28 @@
         <div id="options">
           <p>
           </br>
-            <span class="box1">Language: </span>
+            <span>Language: </span>
             <select name="lexer">
               {% for item in lexers %}
               <option {% if item.0 == lexer %}selected="selected" {% endif %}value="{{ item.0 }}">{{ item.1 }}</option>
               {% endfor %}
-            </select>
-            <span class="box2">Style:</span>
+            </select>&nbsp&nbsp
+            <span>Style:</span>
             <select name="style">
               {% for item in styles %}
               <option {% if item == style %}selected="selected" {% endif %}value="{{ item }}">{{ item }}</option>
               {% endfor %}
-            </select>
-            <input name="linenos" id="linenos" type="checkbox" value="1" {% if linenos %}checked="checked"{% endif %} /><label for="linenos"><span class="box4"> Line numbers </span></label>
+            </select>&nbsp&nbsp
+            <input name="linenos" id="linenos" type="checkbox" value="1" {% if linenos %}checked="checked"{% endif %} />&nbsp&nbsp<label for="linenos"><span> Line numbers </span></label>&nbsp&nbsp<input type="submit" value="Highlight!" style="border:1px solid #000"/>
             <br/>
-            <span class="box3" >CSS: </span>
+            <span>CSS: </span>
             <input type="text" id="divstyles" name="divstyles" value="{{ divstyles|escape }}"/>
-            <input type="submit" value="Highlight!"/>
+            
           </p>
         </div>
         <div id="preview">
           <p>
-            <strong class="box1">Preview:</strong>
+            <strong>Preview:</strong>
           </p>
           {% autoescape false %}
           {{ html }}
@@ -245,34 +204,7 @@
  
     </center>
     
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'colormycode'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-           
-  
-	<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'colormycode'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
+    
     
 
   
