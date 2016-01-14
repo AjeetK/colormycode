@@ -35,7 +35,7 @@ def colormycode(code, lexer, options, style, linenos, divstyles):
     html = highlight(code, get_lexer_by_name(lexer, **options), formatter)
     if linenos:
         html = insert_line_numbers(html)
-    html = "<!-- HTML generated using colormycode -->" + html
+    html = "<!-- HTML generated using highlightmycode -->" + html
     return html
 
 def get_default_style():
