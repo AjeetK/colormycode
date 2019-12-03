@@ -90,5 +90,9 @@ def api():
     response.headers["Content-Type"] = "text/plain"
     return response
 
+@app.route("/api", methods=['GET'])
+def ads():
+    return render_template("ads.txt", text=content)
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
