@@ -90,7 +90,7 @@ def api():
     response.headers["Content-Type"] = "text/plain"
     return response
 
-@app.route("/api", methods=['GET'])
+@app.route("/ads.txt", methods=['GET'])
 def ads():
     return render_template("ads.txt", text=content)
 
